@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY FIRST PAGE</title>
+  </head>
+  <body>
+    <h1>HERE IS THE HOME PAGE</h1>
+    <p>Hello, {{guest}}</p>
+    <a href="https://www.goodjob.life/">Go to good job!</a>
+    <br />
+    <a href="/second">Go to second page</a>
+    <!-- 如果在同一個主機名稱，則可以省去前面的主機名稱，只要放路徑就好 -->
+
+    <img src="/static/cat.jpg" alt="" />
+
+   
+
+    <form action="/calculate">
+      Number: <input type="text" name="max" />
+      <button>Calculate!</button>
+    </form>
+
+    <!-- 利用 POST 傳送資料 -->
+    <!-- 會放在 payload 裡面 -->
+    <!-- 避免暴露在 query string 中 -->
+    <form action="/signup" method="POST">
+        First Name: <input type="text" name="first" />
+        <button>Submit</button>
+      </form>
+      <!-- input標籤內的 name 代表 query string 的參數名稱 -->
+
+  </body>
+</html>
